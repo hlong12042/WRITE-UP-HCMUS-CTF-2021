@@ -7,8 +7,8 @@
 
 ## 2. EasyLogin
 + Tìm cách đăng nhập admin. Thử <pre><code>admin' or 1=1--</code></pre> Thì ta nhận được được Nothing special
-+ Order by thì biết được là SQLite3 và bảng này gồm 2 cột mình 
-+ Thử union select 'admin', 2 Thì trang web trả về một tấm hình
++ Order by thì biết được là SQLite3 và bảng này gồm 2 cột
++ Thử ``union select 'admin', 2`` thì trang web trả về một tấm hình
 + Thử <pre><code>admin' or 1=2--</code></pre> thì nó vẫn ra tấm hình ban nãy -> Nếu đúng thì 'Nothing special' sai thì 'Well done' -> Burteforce
 + Brute tên bảng: 
 <pre><code>
